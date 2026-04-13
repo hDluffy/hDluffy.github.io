@@ -1,12 +1,236 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Privacy Policy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Morphix Face - Privacy & Terms</title>
+
+<style>
+body {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    max-width: 920px;
+    margin: 40px auto;
+    padding: 20px;
+    line-height: 1.7;
+    color: #222;
+    background: #fafafa;
+}
+h1 { font-size: 28px; }
+h2 { margin-top: 28px; }
+.lang-switch {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+button {
+    margin: 2px;
+    padding: 6px 10px;
+    border: none;
+    background: #e5e5e5;
+    cursor: pointer;
+    border-radius: 6px;
+}
+button:hover { background: #ccc; }
+.hidden { display: none; }
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+</style>
+
+<script>
+function setLang(lang) {
+    document.querySelectorAll('.lang').forEach(el => el.classList.add('hidden'));
+    document.getElementById(lang).classList.remove('hidden');
+    localStorage.setItem('lang', lang);
+}
+function autoLang() {
+    let lang = localStorage.getItem('lang');
+    if (!lang) {
+        const l = navigator.language || "";
+        if (l.startsWith('zh')) lang = 'zh';
+        else if (l.startsWith('de')) lang = 'de';
+        else if (l.startsWith('ja')) lang = 'ja';
+        else if (l.startsWith('ko')) lang = 'ko';
+        else lang = 'en';
+    }
+    setLang(lang);
+}
+window.onload = autoLang;
+</script>
 </head>
+
 <body>
-    <h1>Privacy Policy</h1>
-    <p>This app does not collect personal data.</p>
-    <p>If you have any questions, contact us.</p>
+
+<div class="lang-switch">
+    <button onclick="setLang('en')">EN</button>
+    <button onclick="setLang('zh')">中文</button>
+    <button onclick="setLang('de')">DE</button>
+    <button onclick="setLang('ja')">日本語</button>
+    <button onclick="setLang('ko')">한국어</button>
+</div>
+
+<!-- ================= 中文 ================= -->
+<div id="zh" class="lang hidden card">
+
+<h1>隐私政策</h1>
+<p>生效日期：2026-04-12</p>
+
+<p>Morphix Face 非常重视您的隐私。本政策依据 GDPR 及苹果应用商店规范制定。</p>
+
+<h2>1. 数据处理原则</h2>
+<p>所有人脸处理与 AI 生成均在本地设备完成，我们不会上传、存储或共享任何用户媒体数据。</p>
+
+<h2>2. 不收集的数据</h2>
+<ul>
+<li>个人身份信息（姓名、邮箱等）</li>
+<li>精确位置信息</li>
+<li>照片、视频及人脸生物信息</li>
+</ul>
+
+<h2>3. 可能收集的数据</h2>
+<ul>
+<li>设备信息（匿名）</li>
+<li>使用统计数据</li>
+<li>崩溃日志（用于改进稳定性）</li>
+</ul>
+
+<h2>4. 第三方服务</h2>
+<ul>
+<li>Apple 内购（支付处理）</li>
+<li>RevenueCat（订阅状态管理）</li>
+</ul>
+
+<h2>5. 数据安全</h2>
+<p>我们采取行业标准措施保护数据，但不保证绝对安全。</p>
+
+<h2>6. 用户权利（GDPR）</h2>
+<p>您有权访问、更正或删除您的数据（本应用不存储用户数据）。</p>
+
+<h2>7. AI 免责声明</h2>
+<p>AI 生成内容可能存在偏差或不准确，用户需自行判断使用风险。</p>
+
+<h2>8. 联系方式</h2>
+<p>邮箱：18767121490@163.com</p>
+
+<hr>
+
+<h1>服务条款</h1>
+
+<h2>1. 服务说明</h2>
+<p>本应用提供 AI 图像生成与人脸融合工具。</p>
+
+<h2>2. 使用资格</h2>
+<p>用户需年满 13 岁。</p>
+
+<h2>3. 订阅条款</h2>
+<ul>
+<li>订阅为自动续费</li>
+<li>费用将通过 Apple ID 收取</li>
+<li>可在系统设置中取消</li>
+</ul>
+
+<h2>4. 免费试用</h2>
+<p>如提供试用，结束后将自动续费（除非取消）。</p>
+
+<h2>5. 用户责任</h2>
+<p>不得用于违法或侵权用途。</p>
+
+<h2>6. 责任限制</h2>
+<p>服务按“现状”提供，不承担间接损失责任。</p>
+
+<h2>7. 条款变更</h2>
+<p>我们可随时更新条款。</p>
+
+<h2>8. 联系方式</h2>
+<p>开发者：Jiaqing Hu</p>
+
+</div>
+
+<!-- ================= English ================= -->
+<div id="en" class="lang hidden card">
+
+<h1>Privacy Policy</h1>
+<p>Effective Date: 2026-04-12</p>
+
+<p>Morphix Face complies with GDPR and App Store requirements.</p>
+
+<h2>1. Data Processing</h2>
+<p>All AI processing occurs locally. No user media is uploaded or stored.</p>
+
+<h2>2. Data Not Collected</h2>
+<ul>
+<li>Personal identity information</li>
+<li>Location data</li>
+<li>Biometric data</li>
+</ul>
+
+<h2>3. Data Collected</h2>
+<ul>
+<li>Anonymous device info</li>
+<li>Usage analytics</li>
+<li>Crash logs</li>
+</ul>
+
+<h2>4. Third Parties</h2>
+<p>Apple IAP, RevenueCat</p>
+
+<h2>5. User Rights</h2>
+<p>Under GDPR, users may request data access or deletion.</p>
+
+<h2>6. AI Disclaimer</h2>
+<p>AI-generated content may contain inaccuracies.</p>
+
+<hr>
+
+<h1>Terms of Service</h1>
+
+<h2>Subscription</h2>
+<p>Auto-renewable via Apple ID.</p>
+
+<h2>Liability</h2>
+<p>Service provided "as is".</p>
+
+</div>
+
+<!-- ================= Deutsch ================= -->
+<div id="de" class="lang hidden card">
+
+<h1>Datenschutzerklärung</h1>
+
+<p>Alle Daten werden lokal verarbeitet. Keine Speicherung auf Servern.</p>
+
+<h2>GDPR Rechte</h2>
+<p>Nutzer haben das Recht auf Auskunft und Löschung.</p>
+
+<h1>Nutzungsbedingungen</h1>
+<p>Abonnement verlängert sich automatisch.</p>
+
+</div>
+
+<!-- ================= 日本語 ================= -->
+<div id="ja" class="lang hidden card">
+
+<h1>プライバシーポリシー</h1>
+<p>すべての処理はデバイス上で行われます。</p>
+
+<h1>利用規約</h1>
+<p>サブスクリプションは自動更新されます。</p>
+
+</div>
+
+<!-- ================= 한국어 ================= -->
+<div id="ko" class="lang hidden card">
+
+<h1>개인정보 처리방침</h1>
+<p>모든 데이터는 기기 내에서 처리됩니다.</p>
+
+<h1>이용약관</h1>
+<p>구독은 자동 갱신됩니다.</p>
+
+</div>
+
 </body>
 </html>
