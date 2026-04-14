@@ -41,6 +41,12 @@ button:hover { background: #ccc; }
 </style>
 
 <script>
+function setLang(lang) {
+    document.querySelectorAll('.lang').forEach(el => el.classList.add('hidden'));
+    document.getElementById(lang).classList.remove('hidden');
+    localStorage.setItem('lang', lang);
+}
+    
 function getLangFromURL() {
     const params = new URLSearchParams(window.location.search);
     return params.get("lang");
@@ -60,6 +66,7 @@ function autoLang() {
 
     setLang(lang);
 }
+window.onload = autoLang;
 </script>
 </head>
 
