@@ -3,203 +3,459 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Morphix Face - Privacy Policy & Terms</title>
+<title>Morphix Face - Privacy & Terms</title>
+
 <style>
-body { font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif; line-height: 1.7; padding: 24px; max-width: 900px; margin: auto; color: #222; }
-h1, h2, h3 { color: #111; }
-h2 { margin-top: 40px; }
-.section { margin-bottom: 40px; }
-hr { margin: 40px 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    max-width: 920px;
+    margin: 40px auto;
+    padding: 20px;
+    line-height: 1.7;
+    color: #222;
+    background: #fafafa;
+}
+h1 { font-size: 28px; }
+h2 { margin-top: 28px; }
+.lang-switch {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+button {
+    margin: 2px;
+    padding: 6px 10px;
+    border: none;
+    background: #e5e5e5;
+    cursor: pointer;
+    border-radius: 6px;
+}
+button:hover { background: #ccc; }
+.hidden { display: none; }
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
 </style>
+
+<script>
+function setLang(lang) {
+    document.querySelectorAll('.lang').forEach(el => el.classList.add('hidden'));
+    document.getElementById(lang).classList.remove('hidden');
+    localStorage.setItem('lang', lang);
+}
+function autoLang() {
+    let lang = localStorage.getItem('lang');
+    if (!lang) {
+        const l = navigator.language || "";
+        if (l.startsWith('zh')) lang = 'zh';
+        else if (l.startsWith('de')) lang = 'de';
+        else if (l.startsWith('ja')) lang = 'ja';
+        else if (l.startsWith('ko')) lang = 'ko';
+        else lang = 'en';
+    }
+    setLang(lang);
+}
+window.onload = autoLang;
+</script>
 </head>
+
 <body>
 
-<h1>Morphix Face - Legal Documents</h1>
+<div class="lang-switch">
+    <button onclick="setLang('en')">EN</button>
+    <button onclick="setLang('zh')">中文</button>
+    <button onclick="setLang('de')">DE</button>
+    <button onclick="setLang('ja')">日本語</button>
+    <button onclick="setLang('ko')">한국어</button>
+</div>
 
-<!-- ================= ENGLISH ================= -->
-<h2>Privacy Policy</h2>
-<p><strong>Effective Date:</strong> 2026-04-12</p >
+<!-- ================= English ================= -->
+<div id="en" class="lang hidden card">
 
-<p>Morphix Face ("we", "our", or "us") is committed to protecting your privacy. This policy explains how we handle your information in compliance with Apple App Store guidelines and global privacy standards.</p >
+<h1>Privacy Policy</h1>
+<p>Effective Date: 2026-04-12</p>
 
-<h3>1. Core Privacy Principle</h3>
-<p>All face processing, image editing, and media generation are performed <strong>locally on your device</strong>. We do NOT upload, store, or retain your photos, videos, or facial data on any external server.</p >
+<p>Morphix Face values your privacy and complies with GDPR and App Store requirements.</p>
 
-<h3>2. Data We Do NOT Collect</h3>
+<h2>1. Core Principle</h2>
+<p>All face processing and AI generation are performed locally on your device. We do not upload, store, or share your photos, videos, or biometric data.</p>
+
+<h2>2. Data We Do Not Collect</h2>
 <ul>
-<li>Name, email, phone number, or other personal identification</li>
-<li>Precise geolocation data</li>
-<li>Photos, videos, or facial biometric data on our servers</li>
+<li>Personal identity information (name, email, etc.)</li>
+<li>Precise location data</li>
+<li>Photos, videos, or facial biometric data</li>
 </ul>
 
-<h3>3. Data We May Collect</h3>
+<h2>3. Data We May Collect</h2>
 <ul>
-<li>Device identifiers (non-personal)</li>
-<li>App usage and analytics data</li>
-<li>Crash and diagnostic logs</li>
+<li>Anonymous device information</li>
+<li>Usage analytics</li>
+<li>Crash logs for performance improvement</li>
 </ul>
 
-<h3>4. Face Data Usage</h3>
-<p>All facial data processing occurs solely on your device to generate visual effects. This data is not transmitted, stored, or shared with any third party.</p >
-
-<h3>5. Third-Party Services</h3>
+<h2>4. Third-Party Services</h2>
 <ul>
-<li>Apple In-App Purchase (payment and subscription processing)</li>
-<li>RevenueCat (subscription status management)</li>
+<li>Apple In-App Purchase (payment processing)</li>
+<li>RevenueCat (subscription management)</li>
 </ul>
 
-<h3>6. Subscriptions</h3>
-<ul>
-<li>Auto-renewable subscriptions</li>
-<li>Payment will be charged to your Apple ID account</li>
-<li>Subscription renews automatically unless canceled at least 24 hours before the end of the current period</li>
-<li>You can manage or cancel subscriptions in your Apple ID settings</li>
-</ul>
+<h2>5. Data Security</h2>
+<p>We implement industry-standard measures but cannot guarantee absolute security.</p>
 
-<h3>7. Refunds</h3>
-<p>All transactions are processed by Apple. Refund requests must be submitted via Apple’s official platform:<br>
-https://reportaproblem.apple.com/</p >
+<h2>6. User Rights (GDPR)</h2>
+<p>You may request access or deletion of your data. However, this app does not store personal data.</p>
 
-<h3>8. Data Deletion</h3>
-<p>All app-related data is stored locally on your device. Uninstalling the app will remove all such data completely.</p >
+<h2>7. AI Disclaimer</h2>
+<p>AI-generated content may contain inaccuracies. Users are responsible for how they use generated content.</p>
 
-<h3>9. AI Content Disclaimer</h3>
-<p>Generated content is produced by AI and may contain inaccuracies. You are solely responsible for your use of generated content.</p >
-
-<h3>10. Contact</h3>
-<p>Email: 18767121490@163.com</p >
+<h2>8. Contact</h2>
+<p>Email: 18767121490@163.com</p>
 
 <hr>
 
-<h2>Terms of Service</h2>
-<p><strong>Effective Date:</strong> 2026-04-12</p >
+<h1>Terms of Service</h1>
 
-<h3>1. Service Overview</h3>
-<p>Morphix Face provides AI-powered face fusion and media editing tools for personal use.</p >
+<h2>1. Service Description</h2>
+<p>This app provides AI-powered face editing and media generation tools.</p>
 
-<h3>2. Eligibility</h3>
-<p>Users must be at least 13 years old to use this app.</p >
+<h2>2. Eligibility</h2>
+<p>You must be at least 13 years old to use this app.</p>
 
-<h3>3. Free Usage</h3>
-<p>Users may access a limited number of free uses before subscription is required.</p >
-
-<h3>4. Subscription Terms</h3>
+<h2>3. Subscription</h2>
 <ul>
-<li>Subscriptions are auto-renewable</li>
-<li>Charges are applied through your Apple ID account</li>
-<li>Subscriptions may be canceled at any time; cancellation takes effect at the end of the current billing cycle</li>
+<li>Subscriptions automatically renew</li>
+<li>Payment is charged to your Apple ID</li>
+<li>You can cancel anytime in system settings</li>
 </ul>
 
-<h3>5. User Conduct</h3>
-<ul>
-<li>You may not use the app for illegal, infringing, or harmful purposes</li>
-<li>You may not violate the rights of any third party</li>
-</ul>
+<h2>4. Free Trial</h2>
+<p>If a trial is offered, it will automatically convert to a paid subscription unless canceled.</p>
 
-<h3>6. Content Ownership</h3>
-<p>You retain full ownership of all images and content you create using the app.</p >
+<h2>5. User Responsibilities</h2>
+<p>You agree not to use the app for illegal or infringing activities.</p>
 
-<h3>7. Limitation of Liability</h3>
-<p>The service is provided "as is" without warranties of any kind. We are not liable for any direct or indirect damages.</p >
+<h2>6. Limitation of Liability</h2>
+<p>The service is provided "as is" without warranties.</p>
 
-<h3>8. Changes to Terms</h3>
-<p>We reserve the right to update these terms at any time.</p >
+<h2>7. Changes</h2>
+<p>We reserve the right to update these terms at any time.</p>
 
-<h3>9. Contact Information</h3>
-<p>Developer: Jiaqing Hu<br>Email: 18767121490@163.com</p >
+<h2>8. Contact</h2>
+<p>Developer: Jiaqing Hu</p>
 
-<hr>
+</div>
 
 <!-- ================= 中文 ================= -->
-<h2>隐私政策（中文）</h2>
-<p><strong>生效日期：</strong>2026-04-12</p >
+<div id="zh" class="lang hidden card">
 
-<p>Morphix Face 非常重视用户隐私。本政策符合苹果应用商店审核规范及相关隐私要求。</p >
+<h1>隐私政策</h1>
+<p>生效日期：2026-04-12</p>
 
-<h3>1. 核心隐私原则</h3>
-<p>所有人脸处理、图像编辑与媒体生成均在您的设备本地完成，我们不会将您的照片、视频或人脸数据上传或存储至外部服务器。</p >
+<p>Morphix Face 非常重视您的隐私。本政策依据 GDPR 及苹果应用商店规范制定。</p>
 
-<h3>2. 我们不会收集的信息</h3>
+<h2>1. 数据处理原则</h2>
+<p>所有人脸处理与 AI 生成均在本地设备完成，我们不会上传、存储或共享任何用户媒体数据。</p>
+
+<h2>2. 不收集的数据</h2>
 <ul>
-<li>姓名、电话、邮箱等个人身份信息</li>
-<li>精确地理位置信息</li>
-<li>照片、视频、人脸生物信息等用户素材</li>
+<li>个人身份信息（姓名、邮箱等）</li>
+<li>精确位置信息</li>
+<li>照片、视频及人脸生物信息</li>
 </ul>
 
-<h3>3. 可能收集的信息</h3>
+<h2>3. 可能收集的数据</h2>
 <ul>
-<li>设备标识（非个人信息）</li>
-<li>应用使用统计数据</li>
-<li>崩溃日志与诊断信息</li>
+<li>设备信息（匿名）</li>
+<li>使用统计数据</li>
+<li>崩溃日志（用于改进稳定性）</li>
 </ul>
 
-<h3>4. 人脸数据说明</h3>
-<p>人脸数据仅在本地用于效果生成，不会被传输、存储或分享给第三方。</p >
-
-<h3>5. 第三方服务</h3>
+<h2>4. 第三方服务</h2>
 <ul>
-<li>Apple 内购支付</li>
-<li>RevenueCat 订阅管理</li>
+<li>Apple 内购（支付处理）</li>
+<li>RevenueCat（订阅状态管理）</li>
 </ul>
 
-<h3>6. 订阅服务</h3>
-<ul>
-<li>本应用提供自动续费订阅服务</li>
-<li>费用将通过您的 Apple ID 账户收取</li>
-<li>可在 Apple ID 设置中管理或取消订阅</li>
-</ul>
+<h2>5. 数据安全</h2>
+<p>我们采取行业标准措施保护数据，但不保证绝对安全。</p>
 
-<h3>7. 退款政策</h3>
-<p>所有交易由 Apple 统一处理，退款请通过苹果官方渠道申请：<br>
-https://reportaproblem.apple.com/</p >
+<h2>6. 用户权利（GDPR）</h2>
+<p>您有权访问、更正或删除您的数据（本应用不存储用户数据）。</p>
 
-<h3>8. 数据删除</h3>
-<p>应用数据均保存在您设备本地，卸载应用即可彻底删除相关数据。</p >
+<h2>7. AI 免责声明</h2>
+<p>AI 生成内容可能存在偏差或不准确，用户需自行判断使用风险。</p>
 
-<h3>9. AI 内容免责声明</h3>
-<p>AI 生成内容可能存在偏差，用户对生成内容的使用承担全部责任。</p >
-
-<h3>10. 联系我们</h3>
-<p>邮箱：18767121490@163.com</p >
+<h2>8. 联系方式</h2>
+<p>邮箱：18767121490@163.com</p>
 
 <hr>
 
-<h2>服务条款（中文）</h2>
-<p><strong>生效日期：</strong>2026-04-12</p >
+<h1>服务条款</h1>
 
-<h3>1. 服务说明</h3>
-<p>Morphix Face 提供基于 AI 的人脸融合与媒体编辑工具。</p >
+<h2>1. 服务说明</h2>
+<p>本应用提供 AI 图像生成与人脸融合工具。</p>
 
-<h3>2. 使用资格</h3>
-<p>用户需年满 13 周岁方可使用。</p >
+<h2>2. 使用资格</h2>
+<p>用户需年满 13 岁。</p>
 
-<h3>3. 免费使用</h3>
-<p>用户可在订阅前享受有限次数的免费使用额度。</p >
-
-<h3>4. 订阅条款</h3>
+<h2>3. 订阅条款</h2>
 <ul>
-<li>订阅为自动续费类型</li>
-<li>费用通过 Apple ID 账户扣除</li>
-<li>可随时取消，取消后当期服务结束前仍可使用</li>
+<li>订阅为自动续费</li>
+<li>费用将通过 Apple ID 收取</li>
+<li>可在系统设置中取消</li>
 </ul>
 
-<h3>5. 用户行为规范</h3>
+<h2>4. 免费试用</h2>
+<p>如提供试用，结束后将自动续费（除非取消）。</p>
+
+<h2>5. 用户责任</h2>
+<p>不得用于违法或侵权用途。</p>
+
+<h2>6. 责任限制</h2>
+<p>服务按“现状”提供，不承担间接损失责任。</p>
+
+<h2>7. 条款变更</h2>
+<p>我们可随时更新条款。</p>
+
+<h2>8. 联系方式</h2>
+<p>开发者：Jiaqing Hu</p>
+
+</div>
+
+<!-- ================= Deutsch ================= -->
+<div id="de" class="lang hidden card">
+
+<h1>Datenschutzerklärung</h1>
+<p>Gültig ab: 2026-04-12</p>
+
+<p>Morphix Face legt großen Wert auf den Schutz Ihrer Privatsphäre. Diese Richtlinie basiert auf der DSGVO sowie den Richtlinien des App Store.</p>
+
+<h2>1. Datenverarbeitungsprinzip</h2>
+<p>Alle Gesichtsdatenverarbeitung und KI-Generierung erfolgen lokal auf Ihrem Gerät. Wir laden keine Nutzerdaten hoch, speichern sie nicht und geben sie nicht weiter.</p>
+
+<h2>2. Nicht erhobene Daten</h2>
 <ul>
-<li>不得用于违法、侵权、有害用途</li>
-<li>不得侵犯第三方合法权益</li>
+<li>Persönliche Identitätsdaten (Name, E-Mail usw.)</li>
+<li>Genaue Standortdaten</li>
+<li>Fotos, Videos und biometrische Gesichtsdaten</li>
 </ul>
 
-<h3>6. 内容归属</h3>
-<p>用户对使用本应用生成的所有内容拥有完整所有权。</p >
+<h2>3. Möglicherweise erhobene Daten</h2>
+<ul>
+<li>Geräteinformationen (anonym)</li>
+<li>Nutzungsstatistiken</li>
+<li>Absturzprotokolle (zur Verbesserung der Stabilität)</li>
+</ul>
 
-<h3>7. 责任限制</h3>
-<p>服务按“现状”提供，不提供任何明示或暗示担保。</p >
+<h2>4. Drittanbieter-Dienste</h2>
+<ul>
+<li>Apple In-App-Käufe (Zahlungsabwicklung)</li>
+<li>RevenueCat (Abonnementverwaltung)</li>
+</ul>
 
-<h3>8. 条款修改</h3>
-<p>我们保留随时更新条款的权利。</p >
+<h2>5. Datensicherheit</h2>
+<p>Wir ergreifen branchenübliche Maßnahmen zum Schutz der Daten, können jedoch keine absolute Sicherheit garantieren.</p>
 
-<h3>9. 联系方式</h3>
-<p>开发者：Jiaqing Hu<br>邮箱：18767121490@163.com</p >
+<h2>6. Nutzerrechte (DSGVO)</h2>
+<p>Sie haben das Recht auf Zugriff, Berichtigung oder Löschung Ihrer Daten (diese App speichert keine Nutzerdaten).</p>
+
+<h2>7. KI-Haftungsausschluss</h2>
+<p>KI-generierte Inhalte können Abweichungen oder Ungenauigkeiten enthalten. Nutzer sind selbst für die Verwendung verantwortlich.</p>
+
+<h2>8. Kontakt</h2>
+<p>E-Mail: 18767121490@163.com</p>
+
+<hr>
+
+<h1>Nutzungsbedingungen</h1>
+
+<h2>1. Dienstbeschreibung</h2>
+<p>Diese App bietet KI-basierte Bildgenerierung und Gesichtsfusion.</p>
+
+<h2>2. Teilnahmevoraussetzungen</h2>
+<p>Die Nutzung ist nur Personen ab 13 Jahren gestattet.</p>
+
+<h2>3. Abonnementbedingungen</h2>
+<ul>
+<li>Abonnement verlängert sich automatisch</li>
+<li>Gebühren werden über Ihre Apple-ID abgerechnet</li>
+<li>Kann jederzeit in den Systemeinstellungen gekündigt werden</li>
+</ul>
+
+<h2>4. Kostenlose Testphase</h2>
+<p>Falls eine Testphase angeboten wird, verlängert sich das Abonnement automatisch nach Ablauf (sofern nicht gekündigt).</p>
+
+<h2>5. Nutzerverantwortung</h2>
+<p>Die Nutzung für illegale oder rechtsverletzende Zwecke ist untersagt.</p>
+
+<h2>6. Haftungsbeschränkung</h2>
+<p>Der Dienst wird „wie besehen“ bereitgestellt und haftet nicht für indirekte Schäden.</p>
+
+<h2>7. Änderungen</h2>
+<p>Wir behalten uns das Recht vor, diese Bedingungen jederzeit zu ändern.</p>
+
+<h2>8. Kontakt</h2>
+<p>Entwickler: Jiaqing Hu</p>
+
+</div>
+
+<!-- ================= 日本語 ================= -->
+<div id="ja" class="lang hidden card">
+
+<h1>プライバシーポリシー</h1>
+<p>施行日：2026-04-12</p>
+
+<p>Morphix Faceはユーザーのプライバシーを重視しています。本ポリシーはGDPRおよびApp Storeガイドラインに基づいています。</p>
+
+<h2>1. データ処理原則</h2>
+<p>すべての顔処理およびAI生成は端末内で行われ、ユーザーデータをアップロード・保存・共有することはありません。</p>
+
+<h2>2. 収集しないデータ</h2>
+<ul>
+<li>個人識別情報（氏名、メールアドレス等）</li>
+<li>正確な位置情報</li>
+<li>写真、動画および顔の生体情報</li>
+</ul>
+
+<h2>3. 収集される可能性のあるデータ</h2>
+<ul>
+<li>デバイス情報（匿名）</li>
+<li>利用統計データ</li>
+<li>クラッシュログ（安定性向上のため）</li>
+</ul>
+
+<h2>4. 外部サービス</h2>
+<ul>
+<li>Appleのアプリ内課金（決済処理）</li>
+<li>RevenueCat（サブスクリプション管理）</li>
+</ul>
+
+<h2>5. データセキュリティ</h2>
+<p>業界標準の対策を講じていますが、完全な安全性は保証できません。</p>
+
+<h2>6. ユーザーの権利（GDPR）</h2>
+<p>ユーザーはデータへのアクセス、修正、削除を要求する権利があります（本アプリはデータを保存しません）。</p>
+
+<h2>7. AI免責事項</h2>
+<p>AI生成コンテンツには誤差や不正確さが含まれる可能性があります。利用は自己責任で行ってください。</p>
+
+<h2>8. お問い合わせ</h2>
+<p>メール：18767121490@163.com</p>
+
+<hr>
+
+<h1>利用規約</h1>
+
+<h2>1. サービス内容</h2>
+<p>本アプリはAI画像生成および顔融合機能を提供します。</p>
+
+<h2>2. 利用資格</h2>
+<p>13歳以上のユーザーのみ利用可能です。</p>
+
+<h2>3. サブスクリプション条件</h2>
+<ul>
+<li>サブスクリプションは自動更新されます</li>
+<li>料金はApple IDを通じて請求されます</li>
+<li>設定からいつでも解約可能です</li>
+</ul>
+
+<h2>4. 無料トライアル</h2>
+<p>無料トライアルが提供される場合、終了後は自動的に有料プランへ移行します（解約しない限り）。</p>
+
+<h2>5. ユーザー責任</h2>
+<p>違法または権利侵害となる用途での使用は禁止されています。</p>
+
+<h2>6. 責任制限</h2>
+<p>本サービスは「現状のまま」提供され、間接的損害について責任を負いません。</p>
+
+<h2>7. 条項変更</h2>
+<p>当社はこれらの条項を随時変更する権利を有します。</p>
+
+<h2>8. お問い合わせ</h2>
+<p>開発者：Jiaqing Hu</p>
+
+</div>
+
+<!-- ================= 한국어 ================= -->
+<div id="ko" class="lang hidden card">
+
+<h1>개인정보 처리방침</h1>
+<p>시행일: 2026-04-12</p>
+
+<p>Morphix Face는 사용자 개인정보를 중요하게 생각합니다. 본 정책은 GDPR 및 App Store 가이드라인을 기반으로 합니다.</p>
+
+<h2>1. 데이터 처리 원칙</h2>
+<p>모든 얼굴 처리 및 AI 생성은 기기 내에서 이루어지며, 사용자 데이터를 업로드, 저장 또는 공유하지 않습니다.</p>
+
+<h2>2. 수집하지 않는 데이터</h2>
+<ul>
+<li>개인 식별 정보(이름, 이메일 등)</li>
+<li>정확한 위치 정보</li>
+<li>사진, 영상 및 얼굴 생체 정보</li>
+</ul>
+
+<h2>3. 수집될 수 있는 데이터</h2>
+<ul>
+<li>기기 정보(익명)</li>
+<li>사용 통계 데이터</li>
+<li>충돌 로그(안정성 개선 목적)</li>
+</ul>
+
+<h2>4. 제3자 서비스</h2>
+<ul>
+<li>Apple 인앱 결제(결제 처리)</li>
+<li>RevenueCat(구독 관리)</li>
+</ul>
+
+<h2>5. 데이터 보안</h2>
+<p>업계 표준 보호 조치를 적용하지만, 절대적인 보안을 보장하지는 않습니다.</p>
+
+<h2>6. 사용자 권리(GDPR)</h2>
+<p>사용자는 데이터 접근, 수정 또는 삭제를 요청할 권리가 있습니다(본 앱은 데이터를 저장하지 않습니다).</p>
+
+<h2>7. AI 면책 조항</h2>
+<p>AI 생성 결과는 부정확할 수 있으며, 사용은 사용자 책임 하에 이루어집니다.</p>
+
+<h2>8. 문의</h2>
+<p>이메일: 18767121490@163.com</p>
+
+<hr>
+
+<h1>이용약관</h1>
+
+<h2>1. 서비스 설명</h2>
+<p>본 앱은 AI 이미지 생성 및 얼굴 합성 기능을 제공합니다.</p>
+
+<h2>2. 이용 자격</h2>
+<p>13세 이상 사용자만 이용 가능합니다.</p>
+
+<h2>3. 구독 조건</h2>
+<ul>
+<li>구독은 자동 갱신됩니다</li>
+<li>요금은 Apple ID를 통해 청구됩니다</li>
+<li>설정에서 언제든지 해지할 수 있습니다</li>
+</ul>
+
+<h2>4. 무료 체험</h2>
+<p>무료 체험이 제공될 경우, 종료 후 자동으로 유료 구독으로 전환됩니다(해지하지 않는 경우).</p>
+
+<h2>5. 사용자 책임</h2>
+<p>불법 또는 권리 침해 목적으로 사용할 수 없습니다.</p>
+
+<h2>6. 책임 제한</h2>
+<p>서비스는 "있는 그대로" 제공되며 간접 손해에 대해 책임을 지지 않습니다.</p>
+
+<h2>7. 변경</h2>
+<p>당사는 언제든지 약관을 변경할 수 있습니다.</p>
+
+<h2>8. 문의</h2>
+<p>개발자: Jiaqing Hu</p>
+
+</div>
 
 </body>
 </html>
