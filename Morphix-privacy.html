@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Morphix Face - Privacy & Terms</title>
+
+<style>
+body {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    max-width: 920px;
+    margin: 40px auto;
+    padding: 20px;
+    line-height: 1.7;
+    color: #222;
+    background: #fafafa;
+}
+h1 { font-size: 28px; }
+h2 { margin-top: 28px; }
+.lang-switch {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+button {
+    margin: 2px;
+    padding: 6px 10px;
+    border: none;
+    background: #e5e5e5;
+    cursor: pointer;
+    border-radius: 6px;
+}
+button:hover { background: #ccc; }
+.hidden { display: none; }
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+</style>
+
+<script>
+function setLang(lang) {
+    document.querySelectorAll('.lang').forEach(el => {
+        el.classList.add('hidden');
+    });
+
+    const target = document.getElementById(lang);
+    if (target) {
+        target.classList.remove('hidden');
+    } else {
+        document.getElementById('en').classList.remove('hidden');
+    }
+}
+
+function getLangFromURL() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get("lang");
+}
+
+function autoLang() {
+    let lang = getLangFromURL();
+
+    if (!lang) {
+        const l = navigator.language || "";
+        if (l.startsWith('zh')) lang = 'zh';
+        else if (l.startsWith('de')) lang = 'de';
+        else if (l.startsWith('ja')) lang = 'ja';
+        else if (l.startsWith('ko')) lang = 'ko';
+        else lang = 'en';
+    }
+
+    setLang(lang);
+}
+
+window.onload = autoLang;
+</script>
+</head>
+
+<body>
+
+<div class="lang-switch">
+    <button onclick="setLang('en')">EN</button>
+    <button onclick="setLang('zh')">中文</button>
+    <button onclick="setLang('de')">DE</button>
+    <button onclick="setLang('ja')">日本語</button>
+    <button onclick="setLang('ko')">한국어</button>
+</div>
+
+<!-- ================= English ================= -->
+<div id="en" class="lang hidden card">
+
+<h1>Privacy Policy</h1>
+<p>Effective Date: 2026-04-12</p>
+
+<p>Morphix Face values your privacy and complies with GDPR and App Store requirements.</p>
+
+<h2>1. Core Principle</h2>
+<p>All face processing and AI generation are performed locally on your device. We do not upload, store, or share your photos, videos, or biometric data.</p>
+
+<h2>2. Data We Do Not Collect</h2>
+<ul>
+<li>Personal identity information (name, email, etc.)</li>
+<li>Precise location data</li>
+<li>Photos, videos, or facial biometric data</li>
+</ul>
+
+<h2>3. Data We May Collect</h2>
+<ul>
+<li>Anonymous device information</li>
+<li>Usage analytics</li>
+<li>Crash logs for performance improvement</li>
+</ul>
+
+<h2>4. Third-Party Services</h2>
+<ul>
+<li>Apple In-App Purchase (payment processing)</li>
+<li>RevenueCat (subscription management)</li>
+</ul>
+
+<h2>5. Data Security</h2>
+<p>We implement industry-standard measures but cannot guarantee absolute security.</p>
+
+<h2>6. User Rights (GDPR)</h2>
+<p>You may request access or deletion of your data. However, this app does not store personal data.</p>
+
+<h2>7. AI Disclaimer</h2>
+<p>AI-generated content may contain inaccuracies. Users are responsible for how they use generated content.</p>
+
+<h2>8. Contact</h2>
+<p>Developer: Jiaqing Hu</p>
+<p>Email: 18767121490@163.com</p>
+
+</div>
+
+<!-- ================= 中文 ================= -->
+<div id="zh" class="lang hidden card">
+
+<h1>隐私政策</h1>
+<p>生效日期：2026-04-12</p>
+
+<p>Morphix Face 非常重视您的隐私。本政策依据 GDPR 及苹果应用商店规范制定。</p>
+
+<h2>1. 数据处理原则</h2>
+<p>所有人脸处理与 AI 生成均在本地设备完成，我们不会上传、存储或共享任何用户媒体数据。</p>
+
+<h2>2. 不收集的数据</h2>
+<ul>
+<li>个人身份信息（姓名、邮箱等）</li>
+<li>精确位置信息</li>
+<li>照片、视频及人脸生物信息</li>
+</ul>
+
+<h2>3. 可能收集的数据</h2>
+<ul>
+<li>设备信息（匿名）</li>
+<li>使用统计数据</li>
+<li>崩溃日志（用于改进稳定性）</li>
+</ul>
+
+<h2>4. 第三方服务</h2>
+<ul>
+<li>Apple 内购（支付处理）</li>
+<li>RevenueCat（订阅状态管理）</li>
+</ul>
+
+<h2>5. 数据安全</h2>
+<p>我们采取行业标准措施保护数据，但不保证绝对安全。</p>
+
+<h2>6. 用户权利（GDPR）</h2>
+<p>您有权访问、更正或删除您的数据（本应用不存储用户数据）。</p>
+
+<h2>7. AI 免责声明</h2>
+<p>AI 生成内容可能存在偏差或不准确，用户需自行判断使用风险。</p>
+
+<h2>8. 联系方式</h2>
+<p>开发者：Jiaqing Hu</p>
+<p>邮箱：18767121490@163.com</p>
+
+</div>
+
+<!-- ================= Deutsch ================= -->
+<div id="de" class="lang hidden card">
+
+<h1>Datenschutzerklärung</h1>
+<p>Gültig ab: 2026-04-12</p>
+
+<p>Morphix Face legt großen Wert auf den Schutz Ihrer Privatsphäre. Diese Richtlinie basiert auf der DSGVO sowie den Richtlinien des App Store.</p>
+
+<h2>1. Datenverarbeitungsprinzip</h2>
+<p>Alle Gesichtsdatenverarbeitung und KI-Generierung erfolgen lokal auf Ihrem Gerät. Wir laden keine Nutzerdaten hoch, speichern sie nicht und geben sie nicht weiter.</p>
+
+<h2>2. Nicht erhobene Daten</h2>
+<ul>
+<li>Persönliche Identitätsdaten (Name, E-Mail usw.)</li>
+<li>Genaue Standortdaten</li>
+<li>Fotos, Videos und biometrische Gesichtsdaten</li>
+</ul>
+
+<h2>3. Möglicherweise erhobene Daten</h2>
+<ul>
+<li>Geräteinformationen (anonym)</li>
+<li>Nutzungsstatistiken</li>
+<li>Absturzprotokolle (zur Verbesserung der Stabilität)</li>
+</ul>
+
+<h2>4. Drittanbieter-Dienste</h2>
+<ul>
+<li>Apple In-App-Käufe (Zahlungsabwicklung)</li>
+<li>RevenueCat (Abonnementverwaltung)</li>
+</ul>
+
+<h2>5. Datensicherheit</h2>
+<p>Wir ergreifen branchenübliche Maßnahmen zum Schutz der Daten, können jedoch keine absolute Sicherheit garantieren.</p>
+
+<h2>6. Nutzerrechte (DSGVO)</h2>
+<p>Sie haben das Recht auf Zugriff, Berichtigung oder Löschung Ihrer Daten (diese App speichert keine Nutzerdaten).</p>
+
+<h2>7. KI-Haftungsausschluss</h2>
+<p>KI-generierte Inhalte können Abweichungen oder Ungenauigkeiten enthalten. Nutzer sind selbst für die Verwendung verantwortlich.</p>
+
+<h2>8. Kontakt</h2>
+<p>Entwickler: Jiaqing Hu</p>
+<p>E-Mail: 18767121490@163.com</p>
+
+</div>
+
+<!-- ================= 日本語 ================= -->
+<div id="ja" class="lang hidden card">
+
+<h1>プライバシーポリシー</h1>
+<p>施行日：2026-04-12</p>
+
+<p>Morphix Faceはユーザーのプライバシーを重視しています。本ポリシーはGDPRおよびApp Storeガイドラインに基づいています。</p>
+
+<h2>1. データ処理原則</h2>
+<p>すべての顔処理およびAI生成は端末内で行われ、ユーザーデータをアップロード・保存・共有することはありません。</p>
+
+<h2>2. 収集しないデータ</h2>
+<ul>
+<li>個人識別情報（氏名、メールアドレス等）</li>
+<li>正確な位置情報</li>
+<li>写真、動画および顔の生体情報</li>
+</ul>
+
+<h2>3. 収集される可能性のあるデータ</h2>
+<ul>
+<li>デバイス情報（匿名）</li>
+<li>利用統計データ</li>
+<li>クラッシュログ（安定性向上のため）</li>
+</ul>
+
+<h2>4. 外部サービス</h2>
+<ul>
+<li>Appleのアプリ内課金（決済処理）</li>
+<li>RevenueCat（サブスクリプション管理）</li>
+</ul>
+
+<h2>5. データセキュリティ</h2>
+<p>業界標準の対策を講じていますが、完全な安全性は保証できません。</p>
+
+<h2>6. ユーザーの権利（GDPR）</h2>
+<p>ユーザーはデータへのアクセス、修正、削除を要求する権利があります（本アプリはデータを保存しません）。</p>
+
+<h2>7. AI免責事項</h2>
+<p>AI生成コンテンツには誤差や不正確さが含まれる可能性があります。利用は自己責任で行ってください。</p>
+
+<h2>8. お問い合わせ</h2>
+<p>開発者：Jiaqing Hu</p>
+<p>メール：18767121490@163.com</p>
+
+</div>
+
+<!-- ================= 한국어 ================= -->
+<div id="ko" class="lang hidden card">
+
+<h1>개인정보 처리방침</h1>
+<p>시행일: 2026-04-12</p>
+
+<p>Morphix Face는 사용자 개인정보를 중요하게 생각합니다. 본 정책은 GDPR 및 App Store 가이드라인을 기반으로 합니다.</p>
+
+<h2>1. 데이터 처리 원칙</h2>
+<p>모든 얼굴 처리 및 AI 생성은 기기 내에서 이루어지며, 사용자 데이터를 업로드, 저장 또는 공유하지 않습니다.</p>
+
+<h2>2. 수집하지 않는 데이터</h2>
+<ul>
+<li>개인 식별 정보(이름, 이메일 등)</li>
+<li>정확한 위치 정보</li>
+<li>사진, 영상 및 얼굴 생체 정보</li>
+</ul>
+
+<h2>3. 수집될 수 있는 데이터</h2>
+<ul>
+<li>기기 정보(익명)</li>
+<li>사용 통계 데이터</li>
+<li>충돌 로그(안정성 개선 목적)</li>
+</ul>
+
+<h2>4. 제3자 서비스</h2>
+<ul>
+<li>Apple 인앱 결제(결제 처리)</li>
+<li>RevenueCat(구독 관리)</li>
+</ul>
+
+<h2>5. 데이터 보안</h2>
+<p>업계 표준 보호 조치를 적용하지만, 절대적인 보안을 보장하지는 않습니다.</p>
+
+<h2>6. 사용자 권리(GDPR)</h2>
+<p>사용자는 데이터 접근, 수정 또는 삭제를 요청할 권리가 있습니다(본 앱은 데이터를 저장하지 않습니다).</p>
+
+<h2>7. AI 면책 조항</h2>
+<p>AI 생성 결과는 부정확할 수 있으며, 사용은 사용자 책임 하에 이루어집니다.</p>
+
+<h2>8. 문의</h2>
+<p>개발자: Jiaqing Hu</p>
+<p>이메일: 18767121490@163.com</p>
+
+</div>
+
+</body>
+</html>
