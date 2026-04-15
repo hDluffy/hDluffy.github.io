@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Morphix Face - Support</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      line-height: 1.6;
+      color: #333;
+    }
+    h1, h2 {
+      color: #111;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    .email {
+      color: #007AFF;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Morphix Face Support</h1>
+
+<div class="section">
+  <p>Morphix Face is an AI-powered face blending app that allows users to create creative image and video effects directly on their device.</p>
+</div>
+
+<div class="section">
+  <h2>Contact Us</h2>
+  <p>If you need help, please contact us:</p>
+  <p>Email: <span class="email">support@yourdomain.com</span></p>
+</div>
+
+<div class="section">
+  <h2>FAQ</h2>
+  <p><strong>Is my data uploaded to a server?</strong><br>
+  No. All processing is done locally on your device.</p>
+
+  <p><strong>Do you store my photos or videos?</strong><br>
+  No. We do not collect or store any user data.</p>
+
+  <p><strong>How do I cancel my subscription?</strong><br>
+  You can manage or cancel subscriptions in your App Store account settings.</p>
+</div>
+
+<div class="section">
+  <h2>Privacy</h2>
+  <p>We respect your privacy. All face processing is performed on-device. No facial data is collected, stored, or shared.</p>
+</div>
+
+<div class="section">
+  <h2>Usage Guidelines</h2>
+  <p>This app is intended for entertainment and creative purposes only. Users must not use it for impersonation, privacy violations, or illegal activities.</p>
+</div>
+
+</body>
+</html>
